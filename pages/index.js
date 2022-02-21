@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-
 import ServerList from '../components/servers/ServerList';
 
 const DUMMY_SERVERS = [
@@ -29,15 +27,32 @@ const DUMMY_SERVERS = [
 	},
 ];
 
-function HomePage() {
-	const [loadedServers, setLoadedServers] = useState([]);
+function HomePage(props) {
+	return <ServerList servers={props.servers}></ServerList>;
+}
 
-	useEffect(() => {
-		// send a http request and fetch data
-		setLoadedServers(DUMMY_SERVERS);
-	}, []);
+// export async function getServerSideProps(context) {
+// 	const req = context.req;
+// 	const res = context.res;
 
-	return <ServerList servers={loadedServers}></ServerList>;
+// 	// fetch fata from an API
+
+// 	return {
+// 		props: {
+// 			servers: DUMMY_SERVERS,
+// 		},
+// 	};
+// }
+
+export async function getStaticProps() {
+	// fech data from api
+
+	return {
+		props: {
+			servers: DUMMY_SERVERS,
+		},
+		revalidate: 1,
+	};
 }
 
 export default HomePage;

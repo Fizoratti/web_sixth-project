@@ -1,0 +1,53 @@
+[
+	{
+		"prod": {
+			"clingine": [
+				{
+					"srv_type": "clingine",
+					"srv_name": "AUSPWGLXGTW01",
+					"domain": ".aus.amer.dell.com",
+					"os": "Windows",
+					"access_port": "8090",
+					"management_port": "8091"
+				},
+				{},
+				{}
+			],
+			"cligate": [
+				{
+					"srv_type": "clingine",
+					"srv_name": "AUSPWGLXGTW01",
+					"domain": ".aus.amer.dell.com",
+					"os": "Windows",
+					"access_port": "8090",
+					"management_port": "8091"
+				},
+				{},
+				{}
+			]
+		},
+		"dev": {
+			"clingine": {
+				"srv1": {},
+				"srv2": {},
+				"srv3": {}
+			},
+			"cligate": {
+				"srv1": {},
+				"srv2": {}
+			}
+		},
+
+		"qa": {
+			"clingine": {
+				"srv1": {},
+				"srv2": {},
+				"srv3": {}
+			},
+			"cligate": {
+				"srv1": {},
+				"srv2": {}
+			}
+		}
+	}
+]
